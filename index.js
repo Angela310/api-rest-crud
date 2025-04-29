@@ -1,7 +1,7 @@
 import"dotenv/config";
 import express from "express";
 import indexRoutes from "./routes/indexroutes.js"
-import userRoutes from "./routes/usersrouters.js"
+import userRoutes from "./routes/usersroutes.js"
 import cors from "cors";
 import morgan from "morgan";
 
