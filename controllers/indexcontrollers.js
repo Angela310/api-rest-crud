@@ -1,4 +1,4 @@
-export const saludo = (req, res) => res.send("Hola desde la API 2");
+export const saludo = (req, res) => res.send("Hola desde la API");
 
 export const ping = (req, res) => res.send("PONG");
 
