@@ -1,1 +1,3 @@
-https://github.com/Angela310/api-rest-crud.git
+REPO del back end con apis:     https://github.com/Angela310/api-rest-crud
+REPO de la pagina WEB:          https://github.com/Angela310/tc2005n_web
+                                
