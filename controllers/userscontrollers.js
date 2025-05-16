@@ -83,7 +83,7 @@ export const deleteUser = (req,res) => {
 };
 
 
-export const login = (req,res) => {  // <--- SE AGREGO HASH Y SALT
+export const login = (req,res) => {  // POST PARA VERIFICAR QUE SI EXISTE EL USUARIO 
     const { username, password } = req.body;
     pool.execute(
         'SELECT * FROM users WHERE username = ?', 
@@ -99,7 +99,8 @@ export const login = (req,res) => {  // <--- SE AGREGO HASH Y SALT
             .json({ isLogin: false, msg: "credenciales invalidas", user: {} });
             return;
         }
-        const salt = results[0].password.substring(0, process.env.SALT_SIZE);
+        // SE AGREGÓ HASH Y SALT
+        const salt = results[0].password.substring(0, process.env.SALT_SIZE); // SE AGREGÓ HASH Y SALT
         const hash = hashPassword(password, salt);
         if (results[0].password === salt + hash) {
             res.status(200).json({ isLogin: true, msg: "OK", user: results[0]});

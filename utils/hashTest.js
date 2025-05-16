@@ -32,3 +32,6 @@ console.log("\nTexto modificado:", textoModificado);
 console.log("Hash 3:", hash3);
 console.log("Hash 1 y 2:", hash1);
 console.log("¿Hash original y modificado iguales o parecidos?", hash1 === hash3);
+
+//   PARA PROBAR : 
+//   node utils/hashTest.js
