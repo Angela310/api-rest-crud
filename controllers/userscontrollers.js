@@ -22,7 +22,7 @@ export const getUser = (req,res) => {
     });
 };
 
-// AGREGAR UN NUEVO USUARIO
+// AGREGAR UN NUEVO USUARIO <--- SE AGREGO HASH Y SALT
 export const postUser = (req,res) => {
     const { name, username, password, age } = req.body;
     const salt = getSalt();
@@ -83,7 +83,7 @@ export const deleteUser = (req,res) => {
 };
 
 
-export const login = (req,res) => {
+export const login = (req,res) => {  // <--- SE AGREGO HASH Y SALT
     const { username, password } = req.body;
     pool.execute(
         'SELECT * FROM users WHERE username = ?', 
